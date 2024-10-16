@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cardápio Digital</h1>
+
+        <!-- Categoria: Hambúrguer Gourmet -->
+        <h2>Hambúrguer Gourmet</h2>
+        <div class="menu-item">
+            <img src="img/hg.jpg" alt="Hambúrguer Gourmet 1">
+            <div>
+                <h3>Hambúrguer Gourmet Especial</h3>
+                <p>Pão brioche, carne de 180g, cheddar, bacon crocante e molho especial.</p>
+                <p class="price">R$ 35,00</p>
+                <div class="quantity-buttons">
+                    <button onclick="incrementItem('Hambúrguer Gourmet Especial', 35)">+</button>
+                    <span id="quantity-Hambúrguer Gourmet Especial">0</span>
+                    <button onclick="decrementItem('Hambúrguer Gourmet Especial', 35)">-</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Categoria: Hambúrguer Tradicional -->
+        <h2>Hambúrguer Tradicional</h2>
+        <div class="menu-item">
+            <img src="img/ht.jpg" alt="Hambúrguer Tradicional 1">
+            <div>
+                <h3>Hambúrguer Clássico</h3>
+                <p>Pão de hambúrguer, carne de 120g, alface, tomate, queijo e maionese.</p>
+                <p class="price">R$ 25,00</p>
+                <div class="quantity-buttons">
+                    <button onclick="incrementItem('Hambúrguer Clássico', 25)">+</button>
+                    <span id="quantity-Hambúrguer Clássico">0</span>
+                    <button onclick="decrementItem('Hambúrguer Clássico', 25)">-</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categoria: Cachorro-Quente -->
+        <h2>Cachorro-Quente</h2>
+        <div class="menu-item">
+            <img src="img/cq.jpg" alt="Cachorro-Quente">
+            <div>
+                <h3>Cachorro-Quente Completo</h3>
+                <p>Pão, salsicha, molho, purê de batata, milho, batata palha e queijo.</p>
+                <p class="price">R$ 15,00</p>
+                <div class="quantity-buttons">
+                    <button onclick="incrementItem('Cachorro-Quente Completo', 15)">+</button>
+                    <span id="quantity-Cachorro-Quente Completo">0</span>
+                    <button onclick="decrementItem('Cachorro-Quente Completo', 15)">-</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categoria: Pastéis -->
+        <h2>Pastéis</h2>
+        <div class="menu-item">
+            <img src="img/pastel.jpg" alt="Pastel">
+            <div>
+                <h3>Pastel de Carne</h3>
+                <p>Pastel recheado com carne moída temperada.</p>
+                <p class="price">R$ 10,00</p>
+                <div class="quantity-buttons">
+                    <button onclick="incrementItem('Pastel de Carne', 10)">+</button>
+                    <span id="quantity-Pastel de Carne">0</span>
+                    <button onclick="decrementItem('Pastel de Carne', 10)">-</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categoria: Pizza -->
+        <h2>Pizza</h2>
+        <div class="menu-item">
+            <img src="img/pizza.jpg" alt="Pizza">
+            <div>
+                <h3>Pizza Marguerita</h3>
+                <p>Mussarela, tomate e manjericão.</p>
+                <p class="price">R$ 30,00</p>
+                <div class="quantity-buttons">
+                    <button onclick="incrementItem('Pizza Marguerita', 30)">+</button>
+                    <span id="quantity-Pizza Marguerita">0</span>
+                    <button onclick="decrementItem('Pizza Marguerita', 30)">-</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categoria: Bebidas -->
+        <h2>Bebidas</h2>
+        <div class="menu-item">
+            <img src="img/coca.jpg" alt="Refrigerante">
+            <div>
+                <h3>Refrigerante</h3>
+                <p>Lata de refrigerante de 350ml.</p>
+                <p class="price">R$ 5,00</p>
+                <div class="quantity-buttons">
+                    <button onclick="incrementItem('Refrigerante', 5)">+</button>
+                    <span id="quantity-Refrigerante">0</span>
+                    <button onclick="decrementItem('Refrigerante', 5)">-</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Informações de Entrega -->
+        <div class="delivery-info">
+            <h2>Informações de Entrega</h2>
+            <form id="deliveryForm">
+                <label for="address">Endereço:</label>
+                <input type="text" id="address" placeholder="Rua, número, bairro" required>
+
+                <label for="payment">Forma de Pagamento:</label>
+                <select id="payment" required>
+                    <option value="PIX">PIX</option>
+                    <option value="Cartão">Cartão</option>
+                    <option value="Dinheiro">Dinheiro</option>
+                </select>
+
+                <div id="changeSection" style="display:none;">
+                    <label for="change">Troco para:</label>
+                    <input type="number" id="change" placeholder="Digite o valor" min="0">
+                </div>
+
+                <label for="observations">Observações:</label>
+                <textarea id="observations" placeholder="Ex: Sem cebola, com pimenta..." rows="3"></textarea>
+            </form>
+        </div>
+
+        <!-- Resumo do Pedido -->
+        <div class="order-summary">
+            <h2>Resumo do Pedido</h2>
+            <ul id="orderList"></ul>
+            <p id="totalPrice">Total: R$ 0,00</p>
+            <button onclick="sendOrder()">Finalizar Pedido</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    /* Mantém a cor de fundo do corpo */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-image: url('img/fundoo.jpg');
+    /* Adiciona a imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Adiciona a sombra leve */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Adiciona um fundo branco translúcido */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.menu-item {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-item img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.menu-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.menu-item .price {
+    font-weight: bold;
+    color: #28a745;
+}
+
+.menu-item button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item button:hover {
+    background-color: #218838;
+}
+
+.order-summary {
+    margin-top: 30px;
+}
+
+.order-summary h2 {
+    margin-bottom: 15px;
+}
+
+#orderList {
+    list-style: none;
+    padding: 0;
+}
+
+#orderList li {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+#totalPrice {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.order-summary button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.order-summary button:hover {
+    background-color: #0056b3;
+}
+
+.delivery-info {
+    margin-top: 30px;
+}
+
+.delivery-info h2 {
+    margin-bottom: 15px;
+}
+
+.delivery-info label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.delivery-info input[type="text"],
+.delivery-info input[type="number"],
+.delivery-info select,
+.delivery-info textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+#changeSection {
+    display: none;
+}
+
+/* Estilos para os botões de quantidade */
+.menu-item .quantity-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.menu-item .quantity-buttons button {
+    padding: 8px 12px;
+    font-size: 1.2rem;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 500px) {
+    .menu-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-item img {
+        width: 100%;
+        height: auto;
+    }
+}
