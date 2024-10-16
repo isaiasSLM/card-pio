@@ -52,7 +52,7 @@ function updateOrderSummary() {
 }
 
 function sendOrder() {
-    const restaurantNumber = "+5584988770810";  // Substitua pelo número do restaurante
+    const restaurantNumber = "";  // Substitua pelo número do restaurante
     const address = document.getElementById('address').value;
     const payment = document.getElementById('payment').value;
     const change = document.getElementById('change').value;
